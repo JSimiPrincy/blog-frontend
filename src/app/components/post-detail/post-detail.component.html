@@ -1,0 +1,34 @@
+<div class="container" *ngIf="post">  
+  <mat-card class="post-card">  
+   <mat-card-header class="post-header">  
+    <mat-card-title class="post-title">{{ post.title }}</mat-card-title>  
+   </mat-card-header>  
+   <mat-card-content class="post-content">  
+    <p>{{ post.content }}</p>  
+   </mat-card-content>  
+   <mat-card-actions class="post-actions">  
+    <button mat-button class="btn" [routerLink]="['/posts']">Back to List</button>  
+    <button mat-button class="btn" [routerLink]="['/post/edit', post._id]">Edit</button>  
+    <button mat-button class="btn" (click)="toggleCommentForm()">Add Comment</button>  
+   </mat-card-actions>  
+  
+   <div *ngIf="showCommentForm" class="comment-form">  
+    <form [formGroup]="commentForm" (ngSubmit)="onSubmitComment()">  
+      <mat-form-field class="full-width">  
+       <textarea matInput formControlName="content" placeholder="Write your comment here"></textarea>  
+      </mat-form-field>  
+      <button mat-raised-button class="submit-btn" type="submit" [disabled]="commentForm.invalid">Submit Comment</button>  
+    </form>  
+   </div>  
+  
+   <div class="comments-section">  
+    <h3 class="comments-title">Comments</h3>  
+    <ul class="comments-list">  
+      <li *ngFor="let comment of comments" class="comment">  
+       <p>{{ comment.content }}</p>  
+       <small>By: {{ comment.author.username }}</small>  
+      </li>  
+    </ul>  
+   </div>  
+  </mat-card>  
+</div>

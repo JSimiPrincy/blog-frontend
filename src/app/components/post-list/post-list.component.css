@@ -1,0 +1,116 @@
+/* Apply a linear gradient background to the entire container */
+.container {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
+  }
+  
+  /* Title styling */
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+  }
+  
+  /* Style the "Create New Blog" button */
+  button[mat-raised-button] {
+    display: block;
+    margin: 0 auto 40px auto;
+  }
+  
+  /* Create a responsive grid for the posts */
+  .post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Styling each post card */
+  .post-card mat-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .post-card mat-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Style the card title */
+  mat-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Style the card content text */
+  mat-card-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Styling the card actions buttons */
+  mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  /* Comment form styling */
+  .comment-form {
+    margin-top: 20px;
+  }
+  
+  .comment-form mat-form-field {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+  
+  .comment-form button {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  /* Comments section styling */
+  .comments-section {
+    margin-top: 20px;
+  }
+  
+  .comments-section h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .comments-section mat-list-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Comment content and author on the same line */
+  mat-list-item p {
+    display: inline;
+    font-size: 0.9rem;
+    margin-right: 10px;
+  }
+  
+  mat-list-item small {
+    display: inline;
+    font-size: 0.8rem;
+    color: #ddd;
+  }
+  button[mat-button] {
+    margin-right: 5px;
+  }
+  
+  .view-more-button {
+    margin-top: 10px;
+    display: block;
+  }  

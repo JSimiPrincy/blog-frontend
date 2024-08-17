@@ -1,0 +1,88 @@
+.container {  
+  max-width: 800px;  
+  margin: 40px auto;  
+  padding: 20px;  
+  background: linear-gradient(135deg, #6e8efb, #a777e3);  
+  border-radius: 10px;  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+}  
+  
+.post-form-card {  
+  padding: 20px;  
+}  
+  
+h2 {  
+  margin-top: 0;  
+  font-weight: bold;  
+  color: #333;  
+}  
+  
+form {  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+}  
+  
+.form-field {  
+  margin-bottom: 20px;  
+}  
+  
+.mat-form-field {  
+  width: 100%;  
+}  
+  
+.mat-input-element {  
+  width: 100%;  
+  padding: 10px;  
+  font-size: 16px;  
+  border: none;  
+  border-radius: 5px;  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+}  
+  
+.mat-input-element:focus {  
+  border-color: #6e8efb;  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  
+}  
+  
+.submit-btn {  
+  width: 100%;  
+  padding: 10px 20px;  
+  font-size: 16px;  
+  font-weight: bold;  
+  color: #fff;  
+  background-color: #6e8efb;  
+  border: none;  
+  border-radius: 5px;  
+  cursor: pointer;  
+}  
+  
+.submit-btn:hover {  
+  background-color: #a777e3;  
+}  
+  
+.submit-btn[disabled] {  
+  background-color: #ccc;  
+  cursor: not-allowed;  
+}  
+  
+/* Responsive design */  
+@media (max-width: 600px) {  
+ .container {  
+   padding: 10px;  
+  }  
+ .post-form-card {  
+   padding: 10px;  
+  }  
+ .form-field {  
+   margin-bottom: 10px;  
+  }  
+ .mat-input-element {  
+   padding: 8px;  
+   font-size: 14px;  
+  }  
+ .submit-btn {  
+   padding: 8px 15px;  
+   font-size: 14px;  
+  }  
+}

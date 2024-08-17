@@ -1,0 +1,18 @@
+<div class="container">
+  <mat-card class="post-form-card">
+    <h2>{{ isEditMode ? 'Edit' : 'Create' }} Blog Post</h2>
+    <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="form-field" appearance="fill">
+        <mat-label>Title</mat-label>
+        <input matInput id="title" formControlName="title">
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="fill">
+        <mat-label>Content</mat-label>
+        <textarea matInput id="content" formControlName="content"></textarea>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" class="submit-btn" [disabled]="postForm.invalid">
+        {{ isEditMode ? 'Update' : 'Create' }} Post
+      </button>
+    </form>
+  </mat-card>
+</div>
